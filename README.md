@@ -64,6 +64,18 @@ source ./main.tcl
 
 	However, due to the limitation that the Matlab MEX program only allows numerical inputs less than 1, it was not completed). Here, only the fixed-point number processing verification for FFT/IFFT is implemented.
 
+#### 03. Some thoughts
+
+- After my analysis of the code, I think the code follows the processing mode of Zak-OTFS in FPGA implementation.
+
+- Directly using the FFT-ip core will inevitably result in quantization errors between the MATLAB program and the frequency domain processed data. I originally wanted to use the MEX program to implement a completely accurate quantization version of the MATLAB program to achieve consistency with the Verilog simulation data, but due to the limitations of the MEX program itself and limited personal time, I put it on hold.
+
+> Perhaps a manual implementation of the FFT based on the CORDIC algorithm could essentially solve this problem, but further consideration is needed to determine whether this is worthwhile.
+>
+> I personally like consistency, but a small quantization error is enough.
+
+- For the initial VHDL code, I used X-HDL as a code conversion tool, and then processed it manually. The main changes in the program were in the FFT core.
+
 ---
 
 ### 中文

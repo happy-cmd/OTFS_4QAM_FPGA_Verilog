@@ -58,7 +58,7 @@ source ./main.tcl
 
 	- Matlab program - OTFS_Verification_32QAM corresponding simulation test program - TopModuleTb_32.v
 
-	- XILINX_xfftv9_1_test.m corresponds to the simulation test program -TopModuleTb.v
+	- XILINX_xfftv9_1_test.m corresponds to the simulation test program -fft_tb.v
 
 	PS: I originally wanted to use the matlab MEX program corresponding to the Xilinx FFT ip core (see pg109-xfft.pdf for details) to complete precise fixed-point number processing. 
 
@@ -129,7 +129,7 @@ source ./main.tcl
 
 	- matlab程序-OTFS_Verification_32QAM  对应 仿真测试程序-TopModuleTb_32.v
 
-	- XILINX_xfftv9_1_test.m 对应  仿真测试程序-TopModuleTb.v
+	- XILINX_xfftv9_1_test.m 对应  仿真测试程序-fft_tb.v
 
 		PS：这里我原本是想要使用 Xilinx FFT ip core 对应的matlab MEX程序（具体可见pg109-xfft.pdf）完成精确的定点数处理，然而受限于 Matlab MEX程序仅允许小于1的数值输入，并未完成），这里仅实现了对于FFT/IFFT的定点数处理验证。
 

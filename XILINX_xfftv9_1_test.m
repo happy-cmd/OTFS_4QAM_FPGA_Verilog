@@ -47,7 +47,7 @@ fix_yxxx=fix_round(yxxx(1:4096),0,11);
 data_send = fix_round(yxxx(1:64), 0, 11);  % Quantization
 % Write the input data to a text file
 % Open the file to write data
-fileID = fopen('Sim_data/input_data_xfft_tb.txt', 'w');
+fileID = fopen('FPGA/sim_result/input_data_xfft_tb.txt', 'w');
 
 % Loop through each complex value in data_send
 for i = 1:length(data_send)

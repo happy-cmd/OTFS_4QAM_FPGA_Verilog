@@ -1,5 +1,6 @@
 *.asv
 /QAM
 /matlab
-/FPGA/sim_result/
+/FPGA/sim_result/*
+!/FPGA/sim_result/.gitkeep
 /FPGA/OTFS_prj/
